@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Facilities | Bright Secondary School</title>
+  <meta name="description" content="Photo coverage of the dormitories, computer laboratory, school farm, kindergarten, vocational section and home for children with disabilities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Shared styles (every page) ===== */
+    :root {
+      --m:#6b1426;
+      --md:#470b19;
+      --ml:#8f2238;
+      --c:#f6eedf;
+      --cd:#eadfc9;
+      --ink:#2a1a1d;
+      --mut:#6d5a5e;
+      --r:6px;
+    }
+    * {
+      box-sizing:border-box;
+      margin:0;
+    }
+    html {
+      scroll-behavior:smooth;
+      scroll-padding-top:90px;
+    }
+    body {
+      font:17px/1.65 "Nunito Sans",system-ui,sans-serif;
+      color:var(--ink);
+      background:#fff;
+    }
+    h1,h2,h3,h4 {
+      font-family:Fraunces,Georgia,serif;
+      line-height:1.2;
+      color:var(--md);
+    }
+    img {
+      max-width:100%;
+      display:block;
+    }
+    a {
+      color:var(--m);
+    }
+    :focus-visible {
+      outline:3px solid var(--ml);
+      outline-offset:2px;
+    }
+    .wrap {
+      width:min(1160px,92%);
+      margin:auto;
+    }
+    .top {
+      background:var(--md);
+      color:var(--c);
+      font-size:14px;
+    }
+    .top .wrap {
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:6px 18px;
+      padding:8px 0;
+    }
+    .top a {
+      color:var(--c);
+      text-decoration:none;
+      margin-right:18px;
+    }
+    .top a:hover {
+      text-decoration:underline;
+    }
+    header.nav {
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:#fff;
+      border-bottom:1px solid var(--cd);
+    }
+    .nav .wrap {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      min-height:78px;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--md);
+      font:700 20px/1.1 Fraunces,Georgia,serif;
+    }
+    .brand small {
+      display:block;
+      font:600 12px "Nunito Sans",sans-serif;
+      color:var(--mut);
+      margin-top:3px;
+    }
+    nav ul {
+      list-style:none;
+      padding:0;
+      display:flex;
+      gap:2px;
+      align-items:center;
+    }
+    nav li {
+      position:relative;
+    }
+    nav a {
+      display:block;
+      padding:10px 12px;
+      text-decoration:none;
+      color:var(--ink);
+      font-weight:700;
+      font-size:15px;
+      border-radius:var(--r);
+    }
+    nav a:hover,nav a.on {
+      color:var(--m);
+      background:var(--c);
+    }
+    .dd {
+      position:absolute;
+      left:0;
+      top:100%;
+      background:#fff;
+      min-width:210px;
+      border:1px solid var(--cd);
+      box-shadow:0 12px 28px rgba(71,11,25,.14);
+      display:none;
+      padding:6px;
+      flex-direction:column;
+    }
+    li:hover>.dd,li:focus-within>.dd {
+      display:flex;
+    }
+    .btn {
+      display:inline-block;
+      padding:11px 22px;
+      border-radius:var(--r);
+      background:var(--m);
+      color:#fff;
+      font:700 16px "Nunito Sans",sans-serif;
+      text-decoration:none;
+      border:2px solid var(--m);
+      cursor:pointer;
+      transition:background .2s,color .2s,box-shadow .2s;
+    }
+    .btn:hover {
+      background:var(--md);
+      border-color:var(--md);
+      box-shadow:0 0 0 4px rgba(143,34,56,.22);
+    }
+    .btn.o {
+      background:transparent;
+      color:var(--m);
+    }
+    .btn.o:hover {
+      background:var(--m);
+      color:#fff;
+    }
+    .btn.l {
+      background:var(--c);
+      color:var(--md);
+      border-color:var(--c);
+    }
+    .btn.l:hover {
+      background:#fff;
+    }
+    .btn.ow {
+      background:transparent;
+      color:#fff;
+      border-color:#fff;
+    }
+    .btn.ow:hover {
+      background:#fff;
+      color:var(--md);
+    }
+    .burger {
+      display:none;
+      background:var(--c);
+      border:0;
+      border-radius:var(--r);
+      padding:9px 14px;
+      font:700 15px inherit;
+      color:var(--md);
+      cursor:pointer;
+    }
+    .sec {
+      padding:76px 0;
+    }
+    .cream {
+      background:var(--c);
+    }
+    .dark {
+      background:var(--m);
+      color:#fff;
+    }
+    .sec h2 {
+      font-size:clamp(28px,4vw,40px);
+      margin-bottom:12px;
+    }
+    .lead {
+      max-width:62ch;
+      color:var(--mut);
+      margin-bottom:30px;
+    }
+    .dark h2,.dark h3 {
+      color:#fff;
+    }
+    .dark .lead {
+      color:var(--c);
+    }
+    .grid3 {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+    .split {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:48px;
+      align-items:center;
+    }
+    .card {
+      background:#fff;
+      border:1px solid var(--cd);
+      border-radius:10px;
+      overflow:hidden;
+    }
+    .pad {
+      padding:22px;
+    }
+    .fig {
+      aspect-ratio:4/3;
+      background:var(--cd);
+      overflow:hidden;
+    }
+    .fig img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .ph {
+      height:100%;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:14px;
+      color:var(--m);
+      font-weight:700;
+      background:repeating-linear-gradient(135deg,var(--cd) 0 12px,#f2e8d4 12px 24px);
+    }
+    .ph small {
+      display:block;
+      font-weight:600;
+      color:var(--mut);
+    }
+    .ban {
+      background:var(--m);
+      color:#fff;
+      padding:60px 0;
+      position:relative;
+      overflow:hidden;
+    }
+    .ban:after {
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-230px;
+      width:460px;
+      height:460px;
+      border-radius:50%;
+      background:var(--ml);
+      opacity:.4;
+      box-shadow:0 0 0 50px rgba(246,238,223,.06),0 0 0 100px rgba(246,238,223,.04);
+    }
+    .ban .wrap {
+      position:relative;
+      z-index:1;
+    }
+    .ban h1 {
+      color:#fff;
+      font-size:clamp(34px,5vw,52px);
+    }
+    .ban p {
+      color:var(--c);
+      max-width:60ch;
+      margin-top:8px;
+    }
+    .crumb {
+      font-size:14px;
+    }
+    .crumb a {
+      color:var(--c);
+    }
+    .chips {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:26px;
+    }
+    .chip {
+      border:2px solid var(--m);
+      background:#fff;
+      color:var(--m);
+      padding:7px 16px;
+      border-radius:99px;
+      font:700 15px "Nunito Sans",sans-serif;
+      cursor:pointer;
+    }
+    .chip.on,.chip:hover {
+      background:var(--m);
+      color:#fff;
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      background:#fff;
+    }
+    th,td {
+      padding:11px 14px;
+      text-align:left;
+      border-bottom:1px solid var(--cd);
+    }
+    th {
+      background:var(--md);
+      color:#fff;
+    }
+    td:last-child,th:last-child {
+      text-align:right;
+    }
+    tr.tot td {
+      font-weight:700;
+      background:var(--c);
+    }
+    details {
+      background:#fff;
+      border:1px solid var(--cd);
+      border-radius:8px;
+      margin-bottom:10px;
+    }
+    summary {
+      cursor:pointer;
+      padding:14px 18px;
+      font-weight:700;
+      color:var(--md);
+    }
+    details[open] summary {
+      border-bottom:1px solid var(--cd);
+    }
+    details>div {
+      padding:14px 18px;
+    }
+    label {
+      display:block;
+      font-weight:700;
+      font-size:15px;
+      margin:14px 0 4px;
+    }
+    input,select,textarea {
+      width:100%;
+      padding:11px 12px;
+      border:1.5px solid #cdbfa8;
+      border-radius:var(--r);
+      font:inherit;
+      background:#fff;
+    }
+    input[type=checkbox] {
+      width:auto;
+      margin-right:8px;
+    }
+    .msg {
+      margin-top:14px;
+      padding:12px 14px;
+      border-radius:var(--r);
+      display:none;
+    }
+    .msg.ok {
+      display:block;
+      background:#e7f3e8;
+      color:#1d4d27;
+    }
+    .msg.bad {
+      display:block;
+      background:#fbe6e6;
+      color:#7a1220;
+    }
+    footer {
+      background:var(--md);
+      color:var(--c);
+      padding:60px 0 0;
+      font-size:15px;
+    }
+    footer h4 {
+      color:#fff;
+      font-size:18px;
+      margin-bottom:12px;
+    }
+    footer a {
+      color:var(--c);
+      text-decoration:none;
+    }
+    footer a:hover {
+      text-decoration:underline;
+    }
+    footer ul {
+      list-style:none;
+      padding:0;
+    }
+    footer li {
+      margin-bottom:7px;
+    }
+    .fg {
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr 1.6fr;
+      gap:34px;
+    }
+    .fb {
+      border-top:1px solid rgba(246,238,223,.2);
+      margin-top:40px;
+      padding:18px 0;
+      font-size:14px;
+    }
+    .wa {
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:60;
+      background:#90ee90;
+      color:#075e32;
+      padding:12px 18px;
+      border-radius:99px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 6px 18px rgba(7,94,50,.28);
+      transition:box-shadow .2s;
+    }
+    .wa:hover {
+      box-shadow:0 0 0 5px rgba(37,211,102,.25),0 6px 18px rgba(7,94,50,.28);
+    }
+    @media(max-width:1000px) {
+      .burger {
+        display:block;
+      }
+      .cta {
+        display:none;
+      }
+      nav {
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:100%;
+        background:#fff;
+        border-bottom:1px solid var(--cd);
+        padding:8px 4% 14px;
+      }
+      nav.open {
+        display:block;
+      }
+      nav ul {
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .dd {
+        position:static;
+        display:flex;
+        border:0;
+        box-shadow:none;
+        padding:0 0 0 14px;
+      }
+      .split {
+        grid-template-columns:1fr;
+        gap:28px;
+      }
+      .fg {
+        grid-template-columns:1fr 1fr;
+      }
+    }
+    @media(max-width:560px) {
+      .fg {
+        grid-template-columns:1fr;
+      }
+      .sec {
+        padding:54px 0;
+      }
+    }
+
+    a {
+      transition:color .2s,text-shadow .2s;
+    }
+    a:not(.btn):not(.wa):hover {
+      text-shadow:0 0 12px rgba(143,34,56,.45);
+    }
+    .top a:hover,footer a:hover {
+      text-shadow:0 0 12px rgba(246,238,223,.9);
+      text-decoration:none;
+    }
+    .brand svg {
+      transition:filter .25s;
+    }
+    .brand:hover svg {
+      filter:drop-shadow(0 0 9px rgba(143,34,56,.7));
+    }
+    footer .brand:hover svg {
+      filter:drop-shadow(0 0 9px rgba(246,238,223,.9));
+    }
+    nav a {
+      transition:background .2s,color .2s,box-shadow .2s;
+    }
+    nav a:hover,nav a.on {
+      box-shadow:0 0 16px rgba(143,34,56,.28);
+    }
+    .btn {
+      transition:background .2s,color .2s,box-shadow .25s,transform .2s;
+    }
+    .btn:hover {
+      transform:translateY(-2px);
+      box-shadow:0 0 0 3px rgba(246,238,223,.9),0 0 26px 6px rgba(143,34,56,.6);
+    }
+    .btn:active {
+      transform:translateY(0);
+    }
+    .btn.o:hover {
+      box-shadow:0 0 0 3px rgba(143,34,56,.18),0 0 24px 5px rgba(143,34,56,.5);
+    }
+    .btn.l:hover {
+      box-shadow:0 0 0 3px rgba(255,255,255,.55),0 0 28px 8px rgba(246,238,223,.85);
+    }
+    .btn.ow:hover {
+      box-shadow:0 0 28px 8px rgba(255,255,255,.7);
+    }
+    .dark .btn:hover,.hero .btn:hover {
+      box-shadow:0 0 0 3px rgba(255,255,255,.4),0 0 28px 8px rgba(246,238,223,.75);
+    }
+    .card,.mv article,.snap a,.steps li,.mvbox,#sl li,details {
+      transition:box-shadow .25s,transform .25s,border-color .25s,background .2s;
+    }
+    .card:hover,.mv article:hover,.steps li:hover,.mvbox:hover {
+      transform:translateY(-4px);
+      box-shadow:0 0 0 1px var(--ml),0 12px 32px rgba(143,34,56,.3);
+    }
+    .snap a:hover,#sl li:hover {
+      box-shadow:0 0 18px rgba(143,34,56,.35);
+    }
+    details:hover,details[open] {
+      box-shadow:0 0 16px rgba(143,34,56,.22);
+      border-color:var(--ml);
+    }
+    summary:hover {
+      color:var(--ml);
+    }
+    .chip {
+      transition:background .2s,color .2s,box-shadow .25s,transform .2s;
+    }
+    .chip:hover {
+      transform:translateY(-1px);
+      box-shadow:0 0 16px 3px rgba(143,34,56,.45);
+    }
+    .sub a {
+      transition:background .2s,box-shadow .2s;
+    }
+    .sub a:hover {
+      box-shadow:0 0 14px rgba(143,34,56,.4);
+      background:var(--c);
+    }
+    input:focus,select:focus,textarea:focus {
+      outline:none;
+      border-color:var(--m);
+      box-shadow:0 0 0 4px rgba(143,34,56,.15),0 0 18px rgba(143,34,56,.35);
+    }
+    .fig img {
+      transition:transform .5s;
+    }
+    .card:hover .fig img {
+      transform:scale(1.05);
+    }
+    .ban:after,.hero:after {
+      box-shadow:0 0 0 50px rgba(246,238,223,.06),0 0 0 100px rgba(246,238,223,.04),0 0 140px 50px rgba(246,238,223,.22);
+    }
+    .wa {
+      animation:pulse 2.6s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% {
+        box-shadow:0 6px 18px rgba(7,94,50,.28),0 0 0 0 rgba(37,211,102,.45);
+      }
+      50% {
+        box-shadow:0 6px 18px rgba(7,94,50,.28),0 0 0 12px rgba(37,211,102,0);
+      }
+    }
+    .wa:hover {
+      animation:none;
+      box-shadow:0 0 0 4px rgba(144,238,144,.55),0 0 26px 8px rgba(37,211,102,.6);
+    }
+    @media(max-width:1000px) {
+      .card:hover,.mv article:hover,.steps li:hover,.mvbox:hover {
+        transform:none;
+      }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
+      }
+    }
+
+    /* ===== Styles for this page only ===== */
+    .fc {
+      transition:opacity .25s;
+    }
+    .fc.hide {
+      display:none;
+    }
+    .fz {
+      cursor:zoom-in;
+    }
+    .bar {
+      height:10px;
+      background:var(--cd);
+      border-radius:99px;
+      overflow:hidden;
+      margin-bottom:6px;
+    }
+    .bar i {
+      display:block;
+      height:100%;
+      background:var(--m);
+    }
+    dialog {
+      border:0;
+      border-radius:12px;
+      padding:16px;
+      width:min(880px,94vw);
+    }
+    dialog::backdrop {
+      background:rgba(71,11,25,.7);
+    }
+    dialog .fig {
+      aspect-ratio:16/10!important;
+    }
+    #lbt {
+      margin:10px 0;
+      font-weight:700;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <div class="top">
+   <div class="wrap">
+    <span>
+     <a href="tel:+256756231169">
+      +256 756231169
+     </a>
+
+    </span>
+    <span>
+     <a href="admissions.html#fees">
+      Fee structure
+     </a>
+     <a href="admissions.html#rules">
+      School rules
+     </a>
+    </span>
+   </div>
+  </div>
+  <header class="nav">
+   <div class="wrap">
+    <a class="brand" href="index.html">
+     <svg aria-hidden="true" height="44" viewbox="0 0 48 56" width="38">
+      <path d="M24 2 44 9v20c0 12-8 20-20 25C12 49 4 41 4 29V9z" fill="#6b1426">
+      </path>
+      <path d="M12 36a12 12 0 0 1 24 0z" fill="#f6eedf">
+      </path>
+      <path d="M24 14v6M14 20l4 4M34 20l-4 4" stroke="#f6eedf" stroke-linecap="round" stroke-width="2.5">
+      </path>
+     </svg>
+     <span>
+      Bright Secondary School
+      <small>
+       strive for excellency
+      </small>
+     </span>
+    </a>
+    <button aria-expanded="false" aria-label="Open menu" class="burger">
+     Menu
+    </button>
+    <nav aria-label="Main">
+     <ul>
+      <li>
+       <a href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="about.html">
+        About
+       </a>
+       <div class="dd">
+        <a href="about.html#origin">
+         Our origin
+        </a>
+        <a href="about.html#mission">
+         Mission and vision
+        </a>
+        <a href="about.html#governance">
+         Board of Governors
+        </a>
+       </div>
+      </li>
+      <li>
+       <a class="on" href="facilities.html">
+        Facilities
+       </a>
+      </li>
+      <li>
+       <a href="academics.html">
+        Academics
+       </a>
+       <div class="dd">
+        <a href="academics.html#subjects">
+         Subjects offered
+        </a>
+        <a href="academics.html#vocational">
+         Vocational courses
+        </a>
+       </div>
+      </li>
+      <li>
+       <a href="admissions.html">
+        Admissions
+       </a>
+       <div class="dd">
+        <a href="admissions.html#fees">
+         Fee structure
+        </a>
+        <a href="admissions.html#rules">
+         Rules and regulations
+        </a>
+        <a href="admissions.html#apply">
+         Apply online
+        </a>
+       </div>
+      </li>
+      <li>
+       <a href="teachers.html">
+        Teachers
+       </a>
+      </li>
+      <li>
+       <a href="contact.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="cta">
+     <a class="btn" href="admissions.html#apply">
+      Apply now
+     </a>
+    </div>
+   </div>
+  </header>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <main>
+    <section class="ban">
+     <div class="wrap">
+      <p class="crumb">
+       <a href="index.html">
+        Home
+       </a>
+       / Facilities and projects
+      </p>
+      <h1>
+       Facilities and projects
+      </h1>
+      <p>
+       Photographs of the developments under way on our campus. Click any photo to enlarge it.
+      </p>
+     </div>
+    </section>
+    <section class="sec">
+     <div class="wrap">
+      <div aria-label="Filter facilities" class="chips" role="group">
+       <button class="chip on" data-f="all">
+        All
+       </button>
+       <button class="chip" data-f="Boarding">
+        Boarding
+       </button>
+       <button class="chip" data-f="Computer lab">
+        Computer lab
+       </button>
+       <button class="chip" data-f="School farm">
+        School farm
+       </button>
+       <button class="chip" data-f="Kindergarten">
+        Kindergarten
+       </button>
+       <button class="chip" data-f="Vocational">
+        Vocational
+       </button>
+       <button class="chip" data-f="Disability home">
+        Disability home
+       </button>
+      </div>
+      <div class="grid3" id="fg">
+       <article class="card fc" data-c="Boarding" id="dormitories">
+        <div class="fz">
+         <div class="fig" style="aspect-ratio:4/3">
+          <img alt="Student dormitories" data-ph="images/dormitories.jpg" src="images/dormitories.jpg"/>
+         </div>
+        </div>
+        <div class="pad">
+         <h3>
+          Student dormitories
+         </h3>
+         <p style="margin:6px 0 14px">
+          Separate, supervised dormitories for boys and girls with study areas and a matron’s room.
+         </p>
+         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="bar" role="progressbar">
+          <i style="width:60%">
+          </i>
+         </div>
+         <small>
+          Construction progress: 60% (sample figure)
+         </small>
+        </div>
+       </article>
+       <article class="card fc" data-c="Computer lab" id="computer-lab">
+        <div class="fz">
+         <div class="fig" style="aspect-ratio:4/3">
+          <img alt="Computer laboratory" data-ph="images/computer-lab.jpg" src="images/computer-lab.jpg"/>
+         </div>
+        </div>
+        <div class="pad">
+         <h3>
+          Computer laboratory
+         </h3>
+         <p style="margin:6px 0 14px">
+          A networked laboratory where every learner will practise ICT skills.
+         </p>
+         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="bar" role="progressbar">
+          <i style="width:80%">
+          </i>
+         </div>
+         <small>
+          Construction progress: 80% (sample figure)
+         </small>
+        </div>
+       </article>
+       <article class="card fc" data-c="School farm" id="school-farm">
+        <div class="fz">
+         <div class="fig" style="aspect-ratio:4/3">
+          <img alt="School farm" data-ph="images/school-farm.jpg" src="images/school-farm.jpg"/>
+         </div>
+        </div>
+        <div class="pad">
+         <h3>
+          School farm
+         </h3>
+         <p style="margin:6px 0 14px">
+          Crop and animal projects that feed the school and teach agriculture.
+         </p>
+         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" class="bar" role="progressbar">
+          <i style="width:40%">
+          </i>
+         </div>
+         <small>
+          Construction progress: 40% (sample figure)
+         </small>
+        </div>
+       </article>
+       <article class="card fc" data-c="Kindergarten" id="kindergarten">
+        <div class="fz">
+         <div class="fig" style="aspect-ratio:4/3">
+          <img alt="Kindergarten section" data-ph="images/kindergarten.jpg" src="images/kindergarten.jpg"/>
+         </div>
+        </div>
+        <div class="pad">
+         <h3>
+          Kindergarten section
+         </h3>
+         <p style="margin:6px 0 14px">
+          Bright classrooms and a safe play area for our youngest learners.
+         </p>
+         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="55" class="bar" role="progressbar">
+          <i style="width:55%">
+          </i>
+         </div>
+         <small>
+          Construction progress: 55% (sample figure)
+         </small>
+        </div>
+       </article>
+       <article class="card fc" data-c="Vocational" id="vocational">
+        <div class="fz">
+         <div class="fig" style="aspect-ratio:4/3">
+          <img alt="Vocational section" data-ph="images/vocational.jpg" src="images/vocational.jpg"/>
+         </div>
+        </div>
+        <div class="pad">
+         <h3>
+          Vocational section
+         </h3>
+         <p style="margin:6px 0 14px">
+          Workshops for tailoring, carpentry, catering and more.
+         </p>
+         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" class="bar" role="progressbar">
+          <i style="width:45%">
+          </i>
+         </div>
+         <small>
+          Construction progress: 45% (sample figure)
+         </small>
+        </div>
+       </article>
+       <article class="card fc" data-c="Disability home" id="orphanage">
+        <div class="fz">
+         <div class="fig" style="aspect-ratio:4/3">
+          <img alt="Home for children with disabilities" data-ph="images/orphanage.jpg" src="images/orphanage.jpg"/>
+         </div>
+        </div>
+        <div class="pad">
+         <h3>
+          Home for children with disabilities
+         </h3>
+         <p style="margin:6px 0 14px">
+          An accessible home with ramps, therapy space and caring staff.
+         </p>
+         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="bar" role="progressbar">
+          <i style="width:50%">
+          </i>
+         </div>
+         <small>
+          Construction progress: 50% (sample figure)
+         </small>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section>
+    <dialog id="lb">
+     <div id="lbc">
+     </div>
+     <p id="lbt">
+     </p>
+     <button class="btn" id="lbx">
+      Close
+     </button>
+    </dialog>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+   <div class="wrap">
+    <div class="fg">
+     <div>
+      <a class="brand" href="index.html" style="color:#fff">
+       <svg aria-hidden="true" height="44" viewbox="0 0 48 56" width="38">
+        <path d="M24 2 44 9v20c0 12-8 20-20 25C12 49 4 41 4 29V9z" fill="#6b1426">
+        </path>
+        <path d="M12 36a12 12 0 0 1 24 0z" fill="#f6eedf">
+        </path>
+        <path d="M24 14v6M14 20l4 4M34 20l-4 4" stroke="#f6eedf" stroke-linecap="round" stroke-width="2.5">
+        </path>
+       </svg>
+       <span>
+        Bright Secondary School
+       </span>
+      </a>
+      <p style="margin-top:14px">
+       Quality, inclusive education built by SAVE THE CHILD for the children of our community.
+      </p>
+     </div>
+     <div>
+      <h4>
+       About
+      </h4>
+      <ul>
+       <li>
+        <a href="about.html#origin">
+         Our origin
+        </a>
+       </li>
+       <li>
+        <a href="about.html#mission">
+         Mission and vision
+        </a>
+       </li>
+       <li>
+        <a href="about.html#governance">
+         Board of Governors
+        </a>
+       </li>
+       <li>
+        <a href="teachers.html">
+         Faces of the new teachers
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Quick links
+      </h4>
+      <ul>
+       <li>
+        <a href="facilities.html">
+         Facilities
+        </a>
+       </li>
+       <li>
+        <a href="academics.html">
+         Academics
+        </a>
+       </li>
+       <li>
+        <a href="admissions.html#fees">
+         Fee structure
+        </a>
+       </li>
+       <li>
+        <a href="admissions.html#apply">
+         Apply online
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Contact the administration
+      </h4>
+      <ul>
+       <li>
+        <strong>
+         Director
+        </strong>
+        <br/>
+        LUTANKOME NASSER ALI, +256 756231169
+        <br/>
+       </li>
+       <li>
+        <strong>
+         Headteacher
+        </strong>
+        <br/>
+        NAKABANGO RESTY, +256 704380580
+        <br/>
+       </li>
+       <li>
+        <strong>
+         Deputy Headteacher
+        </strong>
+        <br/>
+        MUTAAWE EMMANUEL, +256 700117771
+        <br/>
+       </li>
+       <li>
+        <strong>
+         Director of Studies
+        </strong>
+        <br/>
+        KAYIIRA AKRAM, +256 703403872
+        <br/>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="fb">
+     ©
+     <span id="yr">
+     </span>
+     Bright Secondary School. A project of SAVE THE CHILD.
+    </div>
+   </div>
+  </footer>
+  <a class="wa" href="https://wa.me/256745880974" rel="noopener" target="_blank">
+   Chat on WhatsApp
+  </a>
+
+  <script>
+    // ===== Shared script (menu, photo placeholders, year) =====
+    (function(){
+    var b=document.querySelector(".burger"),n=document.querySelector("nav");
+    b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});
+    function ph(i){if(i.dataset.done)return;i.dataset.done=1;var d=document.createElement("div");d.className="ph";d.innerHTML="<span>Photo placeholder<small>"+i.dataset.ph+"</small></span>";i.replaceWith(d)}
+    document.querySelectorAll("img[data-ph]").forEach(function(i){i.addEventListener("error",function(){ph(i)});if(i.complete&&!i.naturalWidth)ph(i)});
+    document.getElementById("yr").textContent=new Date().getFullYear();
+    })();
+
+    // ===== Script for this page only =====
+    var cs=document.querySelectorAll(".chips .chip"),cards=document.querySelectorAll(".fc");
+    cs.forEach(function(c){c.addEventListener("click",function(){cs.forEach(function(x){x.classList.remove("on")});c.classList.add("on");
+    cards.forEach(function(k){k.classList.toggle("hide",c.dataset.f!=="all"&&k.dataset.c!==c.dataset.f)})})});
+    var lb=document.getElementById("lb");
+    cards.forEach(function(k){k.querySelector(".fz").addEventListener("click",function(){document.getElementById("lbc").innerHTML=this.innerHTML;document.getElementById("lbt").textContent=k.querySelector("h3").textContent;lb.showModal()})});
+    document.getElementById("lbx").addEventListener("click",function(){lb.close()});
+    lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+  </script>
+</body>
+</html>
